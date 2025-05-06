@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
 
-    const Link = <>
+    const Links = <>
 
-        <li><a>Item 1</a></li>
-        <li><a>Item 3</a></li>
+       <Link to={'/userInfo'}> <li><a>User Info</a></li></Link>
+       <Link to={'/content'}> <li><a>Content</a></li></Link>
 
     </>
 
@@ -36,7 +36,7 @@ const handlelogOut = () => {
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             {
-                                Link
+                                Links
                             }
                         </ul>
                     </div>
@@ -45,7 +45,7 @@ const handlelogOut = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {
-                            Link
+                            Links
                         }
                     </ul>
                 </div>
