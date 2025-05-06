@@ -71,7 +71,7 @@ const Login = () => {
 
                            <div className="text-center">
                            {
-                                  user?.email ? <div className="text-green-600">Successfully Login</div>  : <div className="text-red-600">Invalid email or password</div>
+                                  user?.email && <div className="text-green-600">Successfully Login</div>
                             }
                            </div>
 
