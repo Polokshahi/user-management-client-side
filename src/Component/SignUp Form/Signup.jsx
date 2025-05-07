@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../Context/AuthProvider";
+import { Link } from "react-router-dom";
 
 
 
@@ -70,6 +71,12 @@ const Signup = () => {
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
+
+                                <div>
+                                     <p className="text-[14px] text-center">if you have no account <Link className="underline text-red-500"  to={'/login'}>Sign in</Link> </p>
+                                </div>
+
+
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary capitalize">SignUp</button>
